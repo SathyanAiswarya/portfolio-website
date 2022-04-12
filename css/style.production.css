@@ -1,0 +1,461 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/* -------------------------------for all pages(common)------------------------*/
+/*setting the default width of an element to include
+the padding and the border via the box-sizing property and border-box value.*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: rgba(126, 240, 204, 0.612);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 5px;
+  padding: 15px;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+a {
+  /* highlighting all links in blue color*/
+  color: rgb(199, 93, 27);
+}
+.navigation-list_items--active {
+  color: rgb(10, 12, 10);
+}
+a:hover {
+  color: rgb(92, 216, 233);
+  text-decoration: none;
+}
+a:focus {
+  color: rgb(92, 216, 233);
+  text-decoration: none;
+}
+a:active {
+  color: rgb(10, 12, 10);
+}
+/*styling the header*/
+.page_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 98%;
+  padding: 20px;
+  margin: 10px;
+}
+
+.pageheader_item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 200px;
+  flex: 0 1 200px; /* no growth  to both logo and navigation*/
+  width: 50px;
+  height: 80px;
+}
+/* only giving the navigation items to grow*/
+.pageheader_item:last-child {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: right;
+}
+/* removing the unorerders list (.) */
+.navigation_list {
+  list-style-type: none;
+}
+/* to get the navigation items in-line*/
+.navigation_list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+@media all and (max-width: 500px) {
+  .navigation_list li {
+    display: block;
+  }
+}
+
+.findme_links {
+  /* removing the underline - twitter, githup and linkedin */
+  text-decoration: none;
+}
+.page_footer {
+  clear: both; /* dont want footer to have floating property*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* the group of icons changes to being displayed next to the “Find me on” text*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+/*----------------------------------------------index.html---------------------------------------*/
+/*profile picture*/
+.profile_potrait {
+  float: left; /*floating*/
+  width: 300px; /* resizing the profile image*/
+  margin-right: 40px; /* image right margin space*/
+  /*border-radius: 50px; /* curve corners */
+  border-radius: 50%; /* This rounds each edge to 50% of the element’s original width or height*/
+}
+
+.button {
+  /* home page -" check out my codes here " */
+  background-color: rgb(199, 93, 27);
+  color: rgb(10, 12, 10);
+  font-size: 16px;
+  font-family: inherit;
+  padding: 3px;
+  border: none;
+  border-bottom: 2px solid olive;
+  border-radius: 5px;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s; /*css transition added to the button in index.html*/
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity; /*css transition added to the button in index.html*/
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+
+/*styling the entire main */
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+/* styling the welcome text*/
+.welcome_text {
+  text-align: left;
+}
+
+@media all and (max-width: 500px) {
+  .profile_potrait {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+  .welcome_text {
+    text-align: center;
+  }
+}
+
+/*------------------------------------------------about.html-----------------------------------------*/
+/* tables in about page */
+td,
+th {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+th {
+  text-align: center;
+}
+table,
+th,
+td {
+  border: 1px solid;
+}
+table {
+  border-collapse: collapse;
+}
+.about_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+.about_me {
+  text-align: justify;
+}
+.about_table {
+  margin: 15px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.cv_download {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/******************* animation image ******************/
+/* Sun */
+@-webkit-keyframes sun-colorchange {
+  0% {
+    fill: rgb(199, 93, 27);
+  }
+  50% {
+    fill: lightgray;
+  }
+  100% {
+    fill: red;
+  }
+}
+@keyframes sun-colorchange {
+  0% {
+    fill: rgb(199, 93, 27);
+  }
+  50% {
+    fill: lightgray;
+  }
+  100% {
+    fill: red;
+  }
+}
+
+.sun {
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-name: sun-colorchange;
+  animation-name: sun-colorchange;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+/*small cloud*/
+@-webkit-keyframes small-cloud {
+  from {
+    -webkit-transform: translate(400px, 50px);
+    transform: translate(400px, 50px);
+  }
+  to {
+    -webkit-transform: translate(100px, 50px);
+    transform: translate(100px, 50px);
+  }
+}
+@keyframes small-cloud {
+  from {
+    -webkit-transform: translate(400px, 50px);
+    transform: translate(400px, 50px);
+  }
+  to {
+    -webkit-transform: translate(100px, 50px);
+    transform: translate(100px, 50px);
+  }
+}
+.cloud-back {
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-name: small-cloud;
+  animation-name: small-cloud;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+/* big cloud*/
+@-webkit-keyframes big-cloud {
+  from {
+    -webkit-transform: translate(0px, 10px);
+    transform: translate(0px, 10px);
+  }
+  to {
+    -webkit-transform: translate(350px, 10px);
+    transform: translate(350px, 10px);
+  }
+}
+@keyframes big-cloud {
+  from {
+    -webkit-transform: translate(0px, 10px);
+    transform: translate(0px, 10px);
+  }
+  to {
+    -webkit-transform: translate(350px, 10px);
+    transform: translate(350px, 10px);
+  }
+}
+.cloud-front {
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-name: big-cloud;
+  animation-name: big-cloud;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+/*----------------------------------------------work.html---------------------------------------*/
+
+h2 {
+  margin: 5px;
+  padding: 15px;
+}
+.projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 20px 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.projects > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.projects > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.projects > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+.projects > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+.projects > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+.projects > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+.project__item {
+  background-color: lightgray;
+  padding: 5px;
+  text-align: justify;
+}
+.project__item h2 {
+  text-align: center;
+}
+.project_head {
+  text-align: center;
+}
+/* responsive design wit @media */
+
+@media all and (max-width: 500px) {
+  .projects {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .project__item {
+    background-color: lightgray;
+    padding: 5px;
+    text-align: justify;
+  }
+  .project__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .projects {
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .project__item {
+    background-color: lightgray;
+    padding: 5px;
+    text-align: justify;
+  }
+  .project__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: var(smaller-size-fontsize);
+  }
+}
+
+/*----------------------------------------------contact.html-------------------------------*/
+/*h2 has been styled in work.html part*/
+
+.address,
+.contact_me {
+  margin: 15px;
+  padding: 10px;
+}
+.main_contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.contact_form {
+  padding: 20px;
+  margin-left: 5px;
+}
+.contact_form-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10px 3fr;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+.form_submit {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.contact_ways {
+  color: rgb(199, 93, 27);
+}

@@ -1,0 +1,345 @@
+/* -------------------------------for all pages(common)------------------------*/
+/*setting the default width of an element to include
+the padding and the border via the box-sizing property and border-box value.*/
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: rgb(199, 93, 27);
+  --secondary-color: lightgray;
+  --animation-sun: red;
+  --background-color: rgba(126, 240, 204, 0.612);
+  --active: rgb(10, 12, 10);
+  --navigation-hover: rgb(92, 216, 233);
+  --heading-font-weight: 700;
+  --smaller-size-fontsize: 22px;
+  --font-size: 16px;
+  --margin: 0 auto;
+  --heading-margin: 5px;
+  --heading-padding: 15px;
+  --project-padding: 5px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: var(--font-size);
+  background-color: var(--background-color);
+}
+
+main {
+  max-width: 1000px;
+  margin: var(--margin);
+  padding: 0 10px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: var(--heading-font-weight);
+  margin: var(--heading-margin);
+  padding: var(--heading-padding);
+}
+h2 {
+  font-size: 24px;
+  font-weight: var(--heading-font-weight);
+}
+a {
+  /* highlighting all links in blue color*/
+  color: var(--primary-color);
+}
+.navigation-list_items--active {
+  color: var(--active);
+}
+a:hover,
+a:focus {
+  color: var(--navigation-hover);
+  text-decoration: none;
+}
+a:active {
+  color: var(--active);
+}
+/*styling the header*/
+.page_header {
+  display: flex;
+  width: 98%;
+  padding: 20px;
+  margin: 10px;
+}
+
+.pageheader_item {
+  flex: 0 1 200px; /* no growth  to both logo and navigation*/
+  width: 50px;
+  height: 80px;
+}
+/* only giving the navigation items to grow*/
+.pageheader_item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+/* removing the unorerders list (.) */
+.navigation_list {
+  list-style-type: none;
+}
+/* to get the navigation items in-line*/
+.navigation_list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+@media all and (max-width: 500px) {
+  .navigation_list li {
+    display: block;
+  }
+}
+
+.findme_links {
+  /* removing the underline - twitter, githup and linkedin */
+  text-decoration: none;
+}
+.page_footer {
+  clear: both; /* dont want footer to have floating property*/
+  display: flex; /* the group of icons changes to being displayed next to the “Find me on” text*/
+  flex-direction: column;
+  text-align: center;
+}
+
+/*----------------------------------------------index.html---------------------------------------*/
+/*profile picture*/
+.profile_potrait {
+  float: left; /*floating*/
+  width: 300px; /* resizing the profile image*/
+  margin-right: 40px; /* image right margin space*/
+  /*border-radius: 50px; /* curve corners */
+  border-radius: 50%; /* This rounds each edge to 50% of the element’s original width or height*/
+}
+
+.button {
+  /* home page -" check out my codes here " */
+  background-color: var(--primary-color);
+  color: var(--active);
+  font-size: var(--font-size);
+  font-family: inherit;
+  padding: 3px;
+  border: none;
+  border-bottom: 2px solid olive;
+  border-radius: 5px;
+  transition-duration: 1s; /*css transition added to the button in index.html*/
+  transition-property: opacity; /*css transition added to the button in index.html*/
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+
+/*styling the entire main */
+.profile {
+  max-width: 700px;
+  margin: var(--margin);
+}
+/* styling the welcome text*/
+.welcome_text {
+  text-align: left;
+}
+
+@media all and (max-width: 500px) {
+  .profile_potrait {
+    float: none;
+    width: 90%;
+    margin: var(--margin);
+    display: block;
+  }
+  .welcome_text {
+    text-align: center;
+  }
+}
+
+/*------------------------------------------------about.html-----------------------------------------*/
+/* tables in about page */
+td,
+th {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+th {
+  text-align: center;
+}
+table,
+th,
+td {
+  border: 1px solid;
+}
+table {
+  border-collapse: collapse;
+}
+.about_content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.about_me {
+  text-align: justify;
+}
+.about_table {
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.cv_download {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/******************* animation image ******************/
+/* Sun */
+@keyframes sun-colorchange {
+  0% {
+    fill: var(--primary-color);
+  }
+  50% {
+    fill: var(--secondary-color);
+  }
+  100% {
+    fill: var(--animation-sun);
+  }
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: sun-colorchange;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+/*small cloud*/
+@keyframes small-cloud {
+  from {
+    transform: translate(400px, 50px);
+  }
+  to {
+    transform: translate(100px, 50px);
+  }
+}
+.cloud-back {
+  animation-duration: 4s;
+  animation-name: small-cloud;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+/* big cloud*/
+@keyframes big-cloud {
+  from {
+    transform: translate(0px, 10px);
+  }
+  to {
+    transform: translate(350px, 10px);
+  }
+}
+.cloud-front {
+  animation-duration: 4s;
+  animation-name: big-cloud;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+/*----------------------------------------------work.html---------------------------------------*/
+
+h2 {
+  margin: var(--heading-margin);
+  padding: var(--heading-padding);
+}
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+  justify-content: center;
+}
+.project__item {
+  background-color: var(--secondary-color);
+  padding: var(--project-padding);
+  text-align: justify;
+}
+.project__item h2 {
+  text-align: center;
+}
+.project_head {
+  text-align: center;
+}
+/* responsive design wit @media */
+
+@media all and (max-width: 500px) {
+  .projects {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .project__item {
+    background-color: var(--secondary-color);
+    padding: var(--project-padding);
+    text-align: justify;
+  }
+  .project__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: var(--smaller-size-fontsize);
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .projects {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .project__item {
+    background-color: var(--secondary-color);
+    padding: var(--project-padding);
+    text-align: justify;
+  }
+  .project__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: var(smaller-size-fontsize);
+  }
+}
+
+/*----------------------------------------------contact.html-------------------------------*/
+/*h2 has been styled in work.html part*/
+
+.address,
+.contact_me {
+  margin: 15px;
+  padding: 10px;
+}
+.main_contact {
+  display: flex;
+  justify-content: center;
+}
+.contact_form {
+  padding: 20px;
+  margin-left: 5px;
+}
+.contact_form-item {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+.form_submit {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+.contact_ways {
+  color: var(--primary-color);
+}

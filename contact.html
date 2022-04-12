@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> My Portfolio </title>
+    <link rel="shortcut icon" href="./img/hand-holding-a-suitcase-icon-vector-19593845.jpeg" alt="favicon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <header class="page_header">
+        <!-- flex layout -->
+
+        <img class="pageheader_item" src="./img/Aish.png" alt="Aiswarya-logo.jpg">
+
+        <nav class="pageheader_item">
+            <ul role="menubar" class="navigation_list">
+                <li role="presentation">
+                    <a href="index.html" role="menuitem" class="navigation-list_items"> Home </a>
+                </li>
+                <li role="presentation">
+                    <a href="about.html" role="menuitem" class="navigation-list_items"> About Me</a>
+                </li>
+                <li role="presentation">
+                    <a href="work.html" role="menuitem" class="navigation-list_items"> Work </a>
+                </li>
+                <li role="presentation">
+                    <a href="contact.html" role="menuitem" class="navigation-list_items--active"> Contact </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main_contact">
+
+        <div>
+            <h1> Address </h1>
+            <p class="address">
+                Muhlendamm 51 <br>
+                22087 Hamburg <br>
+                Deutschland
+            </p>
+            <h2 class="contact"> Contact Me </h2>
+            <p class="contact_ways"> (directly through email and telephone number)</p>
+            <div class="contact_me">
+                Email: <a href="mailto:aiswaryasathyan1227@gmail.com"> Click to sent an Email </a> <br> <br>
+                Tel : <a href="tel:+4915214733988"> +49-15214733988 </a> <br> <br>
+            </div>
+
+
+            <div>
+                <p class="contact_ways"> (or fill out the form below and submit) </p>
+                <form action="" method="POST" class="contact_form">
+
+                    <div class="contact_form-item">
+                        <label for="first_name" required> First Name </label>
+                        <input type="text" id="first_name" name="user_name">
+                    </div>
+                    <div class="contact_form-item">
+                        <label for="last_name" required> Last Name</label>
+                        <input type="text" id="last_name" name="user_name">
+                    </div>
+                    <div class="contact_form-item">
+                        <label for="email">Email </label>
+                        <input type="email" id="email" name="user_email" required>
+                    </div>
+                    <div class="contact_form-item">
+                        <label for="tel"> Telephone Number </label>
+                        <input type="tel" id="tel" name=" user_number" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                    </div>
+                    <div class="contact_form-item">
+                        <label> Message </label>
+                        <textarea maxlength="240" required> Type your Message here </textarea>
+                    </div>
+                    <div class="form_submit">
+                        <input type="submit" value=" Send message ">
+
+                </form>
+            </div>
+
+    </main>
+
+
+    <footer class="page_footer">
+        <p> Find me on </p>
+        <div class="social_media">
+            <a class="findme_links" href="https://twitter.com/">
+                <img src="img/Twitter.svg" alt="twitter" />
+            </a>
+            <a class="findme_links" href="https://www.linkedin.com/">
+                <img src="img/Linkedin.svg" alt="linkedin" />
+            </a>
+            <a class="findme_links" href="https://github.com/">
+                <img src="img/Github.svg" alt="github" />
+            </a>
+        </div>
+    </footer>
+    <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>
