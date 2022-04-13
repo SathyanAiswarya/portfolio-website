@@ -17,7 +17,7 @@ the padding and the border via the box-sizing property and border-box value.*/
   --larger-heading-fontsize: 30px;
   --smaller-heading-fontsize: 24px;
   --basic-font-size: 16px;
-  --indexpage-main-margin: 0 auto;
+  --center-margin: 0 auto;
   --heading-margin: 5px;
   --heading-padding: 15px;
   --project-padding: 5px;
@@ -32,7 +32,7 @@ body {
 
 main {
   max-width: 1000px;
-  margin: var(--margin);
+  margin: var(--center-margin);
   padding: 0 10px;
 }
 
@@ -136,7 +136,7 @@ a:active {
 /*styling the entire main */
 .profile {
   max-width: 700px;
-  margin: var(--indexpage-main-margin);
+  margin: var(--center-margin);
 }
 /* styling the welcome text*/
 .welcome_text {
@@ -147,7 +147,7 @@ a:active {
   .profile_potrait {
     float: none;
     width: 90%;
-    margin: var(--indexpage-main-margin);
+    margin: var(--center-margin);
     display: block;
   }
   .welcome_text {
