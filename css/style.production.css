@@ -22,7 +22,7 @@ body {
 
 main {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: undefined;
   padding: 0 10px;
 }
 
@@ -123,7 +123,7 @@ a:active {
   /* home page -" check out my codes here " */
   background-color: rgb(199, 93, 27);
   color: rgb(10, 12, 10);
-  font-size: 16px;
+  font-size: undefined;
   font-family: inherit;
   padding: 3px;
   border: none;
@@ -395,7 +395,7 @@ h2 {
     grid-row: auto / auto;
   }
   h1 {
-    font-size: 22px;
+    font-size: undefined;
   }
 }
 
@@ -415,7 +415,7 @@ h2 {
     grid-row: auto / auto;
   }
   h1 {
-    font-size: var(smaller-size-fontsize);
+    font-size: undefined;
   }
 }
 
