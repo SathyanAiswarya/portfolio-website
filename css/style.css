@@ -8,14 +8,16 @@ the padding and the border via the box-sizing property and border-box value.*/
 :root {
   --primary-color: rgb(199, 93, 27);
   --secondary-color: lightgray;
-  --animation-sun: red;
+  --animation-sun-color: red;
   --background-color: rgba(126, 240, 204, 0.612);
-  --active: rgb(10, 12, 10);
-  --navigation-hover: rgb(92, 216, 233);
+  --active-link-color: rgb(10, 12, 10);
+  --hover-link-color: rgb(92, 216, 233);
   --heading-font-weight: 700;
-  --smaller-size-fontsize: 22px;
-  --font-size: 16px;
-  --margin: 0 auto;
+  --smaller-screen-heading-fontsize: 22px;
+  --larger-heading-fontsize: 30px;
+  --smaller-heading-fontsize: 24px;
+  --basic-font-size: 16px;
+  --indexpage-main-margin: 0 auto;
   --heading-margin: 5px;
   --heading-padding: 15px;
   --project-padding: 5px;
@@ -24,7 +26,7 @@ the padding and the border via the box-sizing property and border-box value.*/
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: var(--font-size);
+  font-size: var(--basic-font-size);
   background-color: var(--background-color);
 }
 
@@ -35,13 +37,13 @@ main {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: var(--larger-heading-fontsize);
   font-weight: var(--heading-font-weight);
   margin: var(--heading-margin);
   padding: var(--heading-padding);
 }
 h2 {
-  font-size: 24px;
+  font-size: var(--smaller-heading-fontsize);
   font-weight: var(--heading-font-weight);
 }
 a {
@@ -49,15 +51,15 @@ a {
   color: var(--primary-color);
 }
 .navigation-list_items--active {
-  color: var(--active);
+  color: var(--active-link-color);
 }
 a:hover,
 a:focus {
-  color: var(--navigation-hover);
+  color: var(--hover-link-color);
   text-decoration: none;
 }
 a:active {
-  color: var(--active);
+  color: var(--active-link-color);
 }
 /*styling the header*/
 .page_header {
@@ -116,8 +118,8 @@ a:active {
 .button {
   /* home page -" check out my codes here " */
   background-color: var(--primary-color);
-  color: var(--active);
-  font-size: var(--font-size);
+  color: var(--active-link-color);
+  font-size: var(--basic-font-sizefont-size);
   font-family: inherit;
   padding: 3px;
   border: none;
@@ -134,7 +136,7 @@ a:active {
 /*styling the entire main */
 .profile {
   max-width: 700px;
-  margin: var(--margin);
+  margin: var(--indexpage-main-margin);
 }
 /* styling the welcome text*/
 .welcome_text {
@@ -145,7 +147,7 @@ a:active {
   .profile_potrait {
     float: none;
     width: 90%;
-    margin: var(--margin);
+    margin: var(--indexpage-main-margin);
     display: block;
   }
   .welcome_text {
@@ -203,7 +205,7 @@ table {
     fill: var(--secondary-color);
   }
   100% {
-    fill: var(--animation-sun);
+    fill: var(--animation-sun-color);
   }
 }
 
@@ -290,7 +292,7 @@ h2 {
     grid-row: auto / auto;
   }
   h1 {
-    font-size: var(--smaller-size-fontsize);
+    font-size: var(--mediaquery-heading-fontsize);
   }
 }
 
@@ -309,7 +311,7 @@ h2 {
     grid-row: auto / auto;
   }
   h1 {
-    font-size: var(smaller-size-fontsize);
+    font-size: var(--mediaquery-heading-fontsize);
   }
 }
 
